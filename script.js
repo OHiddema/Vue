@@ -17,6 +17,11 @@ var myViewInstance = new Vue ({
             variantColor: "blue"
          }
       ],
-      sizes: ["S", "M", "L", "XL", "XXL"]
+      cart: 0
+   },
+   methods: {
+      addToCart: function() {
+         this.cart += 1;
+      }
    }
 })

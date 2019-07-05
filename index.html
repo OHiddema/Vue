@@ -28,10 +28,10 @@
             <div v-for="variant in variants">
                <p>{{ variant.variantColor }}</p> 
             </div>
-            Sizes:
-            <ul>
-               <li v-for="size in sizes">{{ size }}</li>
-            </ul>   
+            <button v-on:click="addToCart">Add to cart</button>
+            <div class='cart'>
+               <p>Cart({{cart}})</p>
+            </div>
          </div>
       </div>
    </div>
