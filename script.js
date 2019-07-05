@@ -6,6 +6,16 @@ var myViewInstance = new Vue ({
       link: 'https://www.google.com',
       inventory: 0,
       onSale: true,
-      details: ['80% cotton', '20% polyester', 'Gender-neutral']
+      details: ['80% cotton', '20% polyester', 'Gender-neutral'],
+      variants: [
+         {
+            variantId: 1,
+            variantColor: "green"
+         },
+         {
+            variantId: 2,
+            variantColor: "blue"
+         }
+      ]
    }
 })
