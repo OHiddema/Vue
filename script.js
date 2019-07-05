@@ -10,11 +10,13 @@ var myViewInstance = new Vue ({
       variants: [
          {
             variantId: 1,
-            variantColor: "green"
+            variantColor: "green",
+            variantImage: "assets/vmSocks-green-onWhite.jpg"
          },
          {
             variantId: 2,
-            variantColor: "blue"
+            variantColor: "blue",
+            variantImage: "assets/vmSocks-blue-onWhite.jpg"
          }
       ],
       cart: 0
@@ -22,6 +24,9 @@ var myViewInstance = new Vue ({
    methods: {
       addToCart: function() {
          this.cart += 1;
-      }
+      },
+      updateProduct: function(imgToShow) {
+         this.image = imgToShow;
+      },
    }
 })
