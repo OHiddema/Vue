@@ -16,6 +16,7 @@ var myViewInstance = new Vue ({
             variantId: 2,
             variantColor: "blue"
          }
-      ]
+      ],
+      sizes: ["S", "M", "L", "XL", "XXL"]
    }
 })
