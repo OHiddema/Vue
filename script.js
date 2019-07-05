@@ -5,6 +5,7 @@ var myViewInstance = new Vue ({
       image: 'assets/vmSocks-green-onWhite.jpg',
       link: 'https://www.google.com',
       inventory: 0,
-      onSale: true
+      onSale: true,
+      details: ['80% cotton', '20% polyester', 'Gender-neutral']
    }
 })
