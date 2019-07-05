@@ -4,6 +4,6 @@ var myViewInstance = new Vue ({
       number: 'Socks',
       image: 'assets/vmSocks-green-onWhite.jpg',
       link: 'https://www.google.com',
-      inStock: false
+      inventory: 0
    }
 })
