@@ -12,16 +12,12 @@
    <div id='app'>
       <div class='product'>
          <div class='product-image'>
-            <a :href="link"><img :src="image" alt="socks"></a>            
+            <img :src="image" alt="socks">          
          </div>
          <div class='product-info'>
-            <h1>{{ number }}</h1>
-            <!-- v-if removes elements froom the DOM if not shown -->
-            <!-- On the other hand, v-show sets display to none if not shown -->
-            <p v-if="inventory > 10">In Stock</p>
-            <p v-else-if="inventory <=10 && inventory > 0">Almost sold out</p>
+            <h1>{{ product }}</h1>
+            <p v-if="inStock">In Stock</p>
             <p v-else>Out Of Stock</p>
-            <span v-if="onSale">On Sale!</span>
             <ul>
                <li v-for="detail in details">{{ detail }}</li>
             </ul>
@@ -31,7 +27,9 @@
                  :style="{backgroundColor: variant.variantColor}"
                  @mouseover="updateProduct(variant.variantImage)">
             </div>
-            <button v-on:click="addToCart">Add to cart</button>
+            <button v-on:click="addToCart"
+                    :disabled="!inStock"
+                    :class="{ disabledButton: !inStock }">Add to cart</button>
             <div class='cart'>
                <p>Cart({{cart}})</p>
             </div>

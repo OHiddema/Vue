@@ -1,11 +1,9 @@
-var myViewInstance = new Vue ({
+var app = new Vue ({
    el: '#app',
    data: {
-      number: 'Socks',
+      product: 'Socks',
       image: 'assets/vmSocks-green-onWhite.jpg',
-      link: 'https://www.google.com',
-      inventory: 0,
-      onSale: true,
+      inStock: true,
       details: ['80% cotton', '20% polyester', 'Gender-neutral'],
       variants: [
          {
